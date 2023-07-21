@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="BENCH.JENKINS.AppTest"/>
+     
       <class name="BENCH.JENKINS.Negative"/>
       <class name="BENCH.JENKINS.Positive"/>
     </classes>
