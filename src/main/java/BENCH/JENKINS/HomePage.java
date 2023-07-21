@@ -11,7 +11,7 @@ public class HomePage {
 
 	@BeforeClass
 	public void startBrowser(){
-		System.setProperty("webdriver.chrome.drier",  "\\drivers\\chromedriver.exe");
+		
 		ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         WebDriverManager.chromedriver().setup();
