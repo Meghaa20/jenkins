@@ -11,14 +11,23 @@ public class HomePage {
 
 	@BeforeClass
 	public void startBrowser(){
-	driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver(options);
+        driver.manage().window().maximize();
+
+ 
+
+        driver.get("https://blazedemo.com/index.php");
+	/*driver = new ChromeDriver();
+	
 	driver.manage().window().maximize();
-	driver.get("https://blazedemo.com/index.php");
-	}
+	*driver.get("https://blazedemo.com/index.php");
+	*/}
 
 	@AfterClass
 	public void stopBrowser(){
 	driver.quit();
 	}
-
 }
